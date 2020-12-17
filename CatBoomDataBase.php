@@ -131,7 +131,7 @@ class CatBoomDB{
 		}
 	}
 	/* @name: Check is error */
-	function is_error($dbname){
+	private function is_error($dbname){
 		if(isset($dbname) && !empty($dbname)){
 			return false; // If not error, return false
 		}else{
@@ -139,7 +139,7 @@ class CatBoomDB{
 		}
 	}
 	/* @name: Print error */
-	function error($name = '', $reason = ''){
+	private function error($name = '', $reason = ''){
 		if($name == 'fetch'){ // Check error name
 			echo '<p><b>CatBoomDB Error</b>: Can\'t fetch data because '.$reason.' in <b>'.$_SERVER['DOCUMENT_ROOT'].substr($_SERVER['SCRIPT_NAME'],1).'</b></p>'; // print fetch error
 		}elseif($name == 'insert'){ // Check error name
